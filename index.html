@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- BASIC META -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kwetu Inn Africa 🌴 | Event Planning & Airbnb in Lamu</title>
+  <meta name="description" content="Kwetu Inn Africa offers top-tier event planning, transport, food, accommodation, and Airbnb experiences in Lamu. Ideal for honeymoons, group getaways, and coastal adventures along Kenya’s Swahili coast.">
+  <meta name="keywords" content="Kwetu Inn Africa, Lamu travel, Lamu Airbnb, Kenya coast, event planning Kenya, Lamu hotels, Lamu vacation, honeymoon Lamu, family getaway Kenya, Kwetu Inn accommodation">
+  <meta name="author" content="Kwetu Inn Africa">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <!-- OPEN GRAPH (for Facebook/WhatsApp preview) -->
+  <meta property="og:title" content="Kwetu Inn Africa | Event Planning & Airbnb in Lamu">
+  <meta property="og:description" content="Experience paradise at Kwetu Inn Africa — where comfort meets coastal elegance in Lamu.">
+  <meta property="og:image" content="https://yourdomain.com/images/falcon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com">
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kwetu Inn Africa | Event Planning & Airbnb in Lamu">
+  <meta name="twitter:description" content="Event planning, accommodation, and Airbnb in Lamu with Kwetu Inn Africa. Discover your perfect coastal escape.">
+  <meta name="twitter:image" content="https://yourdomain.com/images/falcon.png">
+
+  <!-- STRUCTURED DATA (Schema.org for SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Kwetu Inn Africa",
+    "image": "https://yourdomain.com/images/falcon.png",
+    "url": "https://yourdomain.com",
+    "telephone": "+254700000000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lamu",
+      "addressCountry": "Kenya"
+    },
+    "description": "Kwetu Inn Africa offers event planning, transport, food, and Airbnb services in Lamu, Kenya.",
+    "sameAs": [
+      "https://www.facebook.com/kwetuinnafrica",
+      "https://www.instagram.com/kwetuinnafrica"
+    ]
+  }
+  </script>
+
+  <!-- TAILWIND & ICONS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    /* Smooth transition for mobile menu */
+    #mobileMenu {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Dynamic header shrink */
+    header {
+      transition: all 0.4s ease;
+    }
+    header.shrink {
+      padding: 0.5rem 0;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Page container margins */
+    .page-container {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @media (min-width: 768px) {
+      .page-container {
+        margin-left: 1cm;
+        margin-right: 1cm;
+      }
+    }
+
+    /* Active link color */
+    .active-link {
+      color: #facc15; /* yellow-300 */
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body class="antialiased text-slate-800">
+  <div class="page-container">
+    <!-- HEADER / NAV -->
+    <header id="mainHeader" class="bg-white/80 backdrop-blur sticky top-0 z-50 shadow transition-all">
+      <div class="container mx-auto flex items-center justify-between p-4">
+        <!-- LOGO -->
+        <a class="flex items-center gap-3" href="index.html">
+          <div class="w-12 h-12 bg-cover bg-center rounded-full border border-yellow-300" 
+               style="background-image:url('images/logo.png')" 
+               aria-label="Kwetu Inn Logo"></div>
+          <div>
+            <h1 class="text-xl font-bold">Kwetu Inn Africa</h1>
+            <p class="text-sm text-yellow-600">Lamu Island • Travel & Airbnb</p>
+          </div>
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:flex gap-6 items-center text-gray-700">
+          <a href="index.html" class="hover:text-yellow-500">Home</a>
+          <a href="#about" class="hover:text-yellow-500">About</a>
+          <a href="#services" class="hover:text-yellow-500">Services</a>
+          <a href="#airbnb" class="hover:text-yellow-500">Airbnb</a>
+          <a href="#gallery" class="hover:text-yellow-500">Gallery</a>
+          <a href="#contact" class="hover:text-yellow-500">Contact</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="#contact" class="px-4 py-2 bg-yellow-400 text-white rounded-lg shadow hover:bg-yellow-500 transition">Book Now</a>
+        </div>
+
+        <!-- MOBILE MENU ICON -->
+        <button id="mobileBtn" class="md:hidden p-2 text-2xl text-gray-700"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg md:hidden transform translate-x-full z-50 p-6">
+      <button id="closeMenu" class="text-xl mb-4"><i class="fas fa-times"></i></button>
+      <nav class="flex flex-col space-y-4 text-gray-700">
+        <a href="index.html" class="hover:text-yellow-500">Home</a>
+        <a href="#about" class="hover:text-yellow-500">About</a>
+        <a href="#services" class="hover:text-yellow-500">Services</a>
+        <a href="#airbnb" class="hover:text-yellow-500">Airbnb</a>
+        <a href="#gallery" class="hover:text-yellow-500">Gallery</a>
+        <a href="#contact" class="hover:text-yellow-500">Contact</a>
+        <a href="#contact" class="font-semibold text-yellow-500">Book Now</a>
+      </nav>
+    </div>
+  </div>
+
+  <script>
+    // MOBILE MENU TOGGLE
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.style.transform = 'translateX(0)';
+    });
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.style.transform = 'translateX(100%)';
+    });
+
+    // HEADER SHRINK ON SCROLL
+    const header = document.getElementById('mainHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+      }
+    });
+
+    // ACTIVE LINK HIGHLIGHT
+    const links = document.querySelectorAll('nav a');
+    const currentPage = window.location.hash || window.location.pathname.split('/').pop();
+    links.forEach(link => {
+      if (link.getAttribute('href').includes(currentPage)) {
+        link.classList.add('active-link');
+      }
+    });
+  </script>
+
+<!-- ✅ Hero Section: Kwetu In - Tourism & Adventure in Lamu -->
+<section id="home" class="relative h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
+
+  <!-- 🌊 Animated Background (Water Movement Effect) -->
+  <div class="absolute inset-0 bg-[url('images/lamu_town.webp')] bg-contain bg-center animate-water"></div>
+
+  <!-- 🌫 Overlay for Readability -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black/30"></div>
+
+  <!-- ✨ Hero Content -->
+  <div class="relative z-10 px-6 md:px-12 max-w-3xl">
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
+      Explore <span class="text-yellow-400">Kwetu In</span> – Lamu’s Gateway to Adventure
+    </h1>
+
+    <p class="mt-5 text-lg md:text-xl text-gray-200 leading-relaxed">
+      Discover the magic of <strong>Lamu County</strong> — from serene <strong>beaches</strong> and thrilling 
+      <strong>boat rides</strong> to mouthwatering <strong>coastal dishes</strong>. 
+      Your unforgettable <strong>tourism and adventure</strong> experience starts here.
+    </p>
+
+    <a href="#contact"
+       class="mt-8 inline-block bg-yellow-400 text-gray-900 font-bold text-lg px-8 py-3 rounded-2xl 
+              shadow-lg hover:bg-yellow-500 hover:scale-105 transition duration-300 ease-in-out">
+      🌴 Start Your Lamu Adventure
+    </a>
+  </div>
+
+  <!-- SEO Enhancement: hidden alt text for background -->
+  <span class="sr-only">
+    Kwetu In - tourism and adventure services in Lamu County, Kenya including beaches, boat rides, and local coastal dishes.
+  </span>
+
+  <!-- 🌊 CSS Animation -->
+  <style>
+    @keyframes waveMove {
+      0% { background-position: 0 0; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0 0; }
+    }
+    .animate-water {
+      animation: waveMove 25s ease-in-out infinite;
+      background-size: 200% 200%;
+    }
+  </style>
+</section>
+
+
+    <!-- About Section -->
+<section id="about" class="max-w-7xl mx-auto p-8">
+  <h3 class="text-3xl text-brand-blue text-center mb-10">Kwetu Inn Africa</h3>
+  <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+    <div>
+      <img src="images/6.jpg" alt="Kwetu Inn Travel Agency" class="rounded-2xl shadow-lg w-full">
+    </div>
+    <div>
+      <h4 class="text-2xl  text-bg-brand-blue font-semibold mb-4">Your Trusted Travel Agency</h4>
+      <p class="text-lg leading-relaxed">
+        At Kwetu Inn Africa, we go beyond accommodation — we are your <strong>full-service travel partner in Lamu</strong>.  
+        From airport transfers and island tours to cultural experiences and event planning, our dedicated team ensures your journey is seamless, stress-free, and unforgettable.  
+        Whether you’re planning a <strong>safari adventure</strong>, a <strong>baecation</strong>, or a <strong>corporate retreat</strong>, we’ll handle the details while you focus on making memories.  
+      </p>
+    </div>
+  </div>
+<!-- 🌍 Travel Experiences Section - Kwetu In Lamu -->
+<section class="bg-brand-blue py-12 px-6" id="experiences">
+  <div class="max-w-7xl mx-auto">
+    <!-- 🏝 Section Heading -->
+    <h2 class="text-3xl md:text-4xl font-extrabold text-center text-brand-yellow mb-10 leading-tight">
+      Explore Our Travel & Adventure Experiences in Lamu County
+    </h2>
+
+    <!-- ✨ Experience Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Safari Adventures -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1">
+        <img src="images/1.jpg" alt="Safari adventures in Kenya" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-brand-blue">Safari Adventures</h3>
+          <p class="text-gray-3bg-yellow-300 mt-3">
+            Experience breathtaking <strong>wildlife safaris</strong> across Kenya’s vast savannahs and national parks, 
+            guided by experts from <strong>Kwetu In Lamu</strong>.
+          </p>
+          <button class="mt-4 bg-brand-yellow text-brand-blue font-bold px-5 py-2 rounded-lg hover:bg-yellow-400 transition">
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      <!-- Beach Getaways -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1">
+        <img src="images/7.jpeg" alt="Beach getaways in Lamu" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-brand-blue">Beach Getaways</h3>
+          <p class="text-gray-3bg-yellow-300 mt-3">
+            Relax on the pristine <strong>beaches of Lamu</strong> with private villas, dhow boat rides, 
+            fresh <strong>coastal dishes</strong>, and unforgettable sunsets.
+          </p>
+          <button class="mt-4 bg-brand-yellow text-brand-blue font-bold px-5 py-2 rounded-lg hover:bg-yellow-400 transition">
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      <!-- Cultural Tours -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1">
+        <img src="images/2.jpg" alt="Cultural tours in Lamu" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-brand-blue">Cultural Tours</h3>
+          <p class="text-gray-3bg-yellow-300 mt-3">
+            Immerse yourself in the <strong>Swahili culture</strong> of Lamu – explore historic towns, 
+            traditional cuisine, and vibrant coastal life.
+          </p>
+          <button class="mt-4 bg-brand-yellow text-brand-blue font-bold px-5 py-2 rounded-lg hover:bg-yellow-400 transition">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📞 CTA at the Bottom Center -->
+    <div class="text-center mt-16">
+      <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
+        Ready to Start Your Lamu Adventure?
+      </h3>
+      <p class="text-gray-400 max-w-2xl mx-auto mb-6">
+        Whether you dream of <strong>boat rides</strong> through mangroves, <strong>beachfront relaxation</strong>, or authentic 
+        <strong>cultural experiences</strong> — Kwetu In is your trusted local guide in <strong>Lamu County</strong>.
+      </p>
+      <a href="#contact"
+         class="inline-block bg-yellow-400 text-brand-blue font-extrabold text-lg px-8 py-3 rounded-2xl 
+                shadow-lg hover:bg-yellow-500 hover:scale-105 transition duration-300 ease-in-out">
+        🌴 Plan Your Trip Now
+      </a>
+    </div>
+  </div>
+
+  <!-- ♻️ SEO Enhancement -->
+  <span class="sr-only">
+    Kwetu In offers tourism and adventure experiences across Lamu County, including safaris, beach getaways, and cultural tours.
+  </span>
+</section>
+
+<!-- 🌍 Hero Cover Section -->
+<section class="flex flex-col md:flex-row w-full font-[Poppins]" 
+         id="hero" 
+         style="height: 10cm;">
+
+  <!-- 🖼️ Left Image -->
+  <div class="md:w-1/2 w-full h-1/2 md:h-full bg-contain bg-center bg-no-repeat" 
+       style="background-image: url('images/8.jpg');">
+  </div>
+
+  <!-- 🖤 Right Content -->
+  <div class="md:w-1/2 w-full h-1/2 md:h-full bg-black flex flex-col items-center justify-center text-center text-white p-10">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight leading-tight">
+      Kwetu Inn Africa
+    </h1>
+    <p class="text-lg md:text-xl text-gray-300 mb-10">
+      Your Gateway to <strong>Lamu’s Adventures, Beaches, and Culture</strong>
+    </p>
+
+    <!-- 🌐 Social Media Icons -->
+    <div class="flex justify-center space-x-6 text-4xl mb-8">
+      <a href="#" aria-label="Facebook" class="text-[#1877F2] hover:scale-110 transition"><i class="fab fa-facebook-square"></i></a>
+      <a href="#" aria-label="Instagram" class="text-[#E4405F] hover:scale-110 transition"><i class="fab fa-instagram-square"></i></a>
+      <a href="#" aria-label="Twitter" class="text-[#1DA1F2] hover:scale-110 transition"><i class="fab fa-twitter-square"></i></a>
+      <a href="#" aria-label="WhatsApp" class="text-[#25D366] hover:scale-110 transition"><i class="fab fa-whatsapp-square"></i></a>
+    </div>
+
+    <!-- 🔽 Scroll Down Arrow -->
+    <a href="#cta-section" class="animate-bounce text-yellow-400 mt-6 text-3xl hover:text-yellow-300 transition" title="Explore more">
+      <i class="fas fa-arrow-down"></i>
+    </a>
+  </div>
+</section>
+
+
+<!-- ✨ CTA Section (Full Screen) -->
+<section id="cta-section" 
+          class="flex flex-col items-center justify-center text-brand-blue text-center px-6 w-full"
+            style="height: 100vh;">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-black">
+             Ready to Explore Lamu’s Hidden Gems? </h2>
+           <p class="text-lg md:text-2xl max-w-2xl mx-auto mb-10 text-gray-800 leading-relaxed">
+         From <strong>coastal beaches</strong> and <strong>boat rides</strong> to delicious <strong>Swahili dishes</strong> — 
+    Kwetu Inn Africa is your trusted partner for authentic <strong>Lamu County adventures</strong>.
+  </p>
+
+  <!-- 🌴 CTA Button -->
+  <a href="#contact"
+     class="inline-block font-bold text-lg px-10 py-4 text-black shadow-lg hover:scale-105 transition duration-300 ease-in-out border-grey-500 bg-yellow-300 rounded-2xl hover:bg-yellow-400">
+    🌴 Book Your Adventure Now
+  </a>
+
+  <!-- Hidden SEO Text for Relevance -->
+  <span class="sr-only">
+    Kwetu Inn Africa offers tourism, adventure, and cultural experiences across Lamu County, including beaches, boat rides, and traditional coastal cuisine.
+  </span>
+</section>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;3bg-yellow-300;bg-yellow-400&display=swap" rel="stylesheet">
+
+
+<!-- ⚓ Services Section (Moving Waves Background) -->
+<section id="services" 
+  class="relative flex items-center justify-center min-h-screen text-center overflow-hidden">
+
+  <!-- 🌊 Animated Moving Wave Background -->
+  <div class="absolute inset-0 bg-contain bg-center animate-waves" 
+       style="background-image: url('images/tusitiri_sunset_sail1-Tusitiri-Dhow-Lamu-Kenya.webp');">
+  </div>
+
+  <!-- Dark overlay for text contrast -->
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <!-- 🔹 Content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-6 text-white">
+    <h3 class="text-4xl md:text-5xl font-extrabold mb-12 tracking-wide drop-shadow-lg">
+      Our Premium Services
+    </h3>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- 🚢 Transport -->
+      <div class="bg-white/90 text-gray-900 shadow-lg rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
+        <h4 class="font-semibold text-2xl mb-3">🚢 Transport</h4>
+        <p class="text-lg text-gray-700">Smooth boat rides and island transfers — always on time.</p>
+      </div>
+
+      <!-- 🍴 Food & Catering -->
+      <div class="bg-white/90 text-gray-900 shadow-lg rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
+        <h4 class="font-semibold text-2xl mb-3">🍴 Food & Catering</h4>
+        <p class="text-lg text-gray-700">Fresh Swahili seafood and local dishes served your way.</p>
+      </div>
+
+      <!-- 🏨 Accommodation -->
+      <div class="bg-white/90 text-gray-900 shadow-lg rounded-2xl p-8 hover:scale-105 transition-transform duration-300">
+        <h4 class="font-semibold text-2xl mb-3">🏨 Accommodation</h4>
+        <p class="text-lg text-gray-700">Cozy beachfront villas for your perfect island escape.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🌊 JS: Pause animation on scroll -->
+  <script>
+    const bg = document.querySelector('#services > div:first-child');
+    window.addEventListener('scroll', () => {
+      const section = document.getElementById('services');
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 0 && rect.bottom >= 0) {
+        bg.style.animationPlayState = 'paused';
+      } else {
+        bg.style.animationPlayState = 'running';
+      }
+    });
+  </script>
+
+  <!-- 🌊 CSS Animations -->
+  <style>
+    @keyframes oceanWave {
+      0% {
+        background-position: 0% 50%;
+        transform: scale(1);
+      }
+      50% {
+        background-position: 100% 55%;
+        transform: scale(1.05);
+      }
+      100% {
+        background-position: 0% 50%;
+        transform: scale(1);
+      }
+    }
+
+    .animate-waves {
+      animation: oceanWave 15s ease-in-out infinite;
+      background-size: 200% 200%;
+      opacity: 0.8;
+      will-change: background-position, transform;
+    }
+  </style>
+</section>
+
+
+  <!-- Airbnb Focus -->
+<!-- Include AOS Library (add these once in your <head> if not already included) -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<!-- 🏡 Airbnb Section -->
+<section id="airbnb" class="bg-white py-20">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+
+    <!-- 🌴 Big Title -->
+    <h2 class="text-4xl md:text-6xl font-extrabold mb-16 text-gray-800 tracking-tight"
+        data-aos="zoom-in" data-aos-duration="1000">
+      Luxury Airbnb Experience
+    </h2>
+
+    <!-- 🌅 Content Grid -->
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      
+      <!-- 📝 Text Content -->
+      <div class="order-2 md:order-1 text-left" data-aos="fade-right" data-aos-duration="1000">
+        <h4 class="text-2xl font-semibold mb-4 text-gray-900">Luxury Airbnb Stays</h4>
+        <p class="text-lg leading-relaxed text-gray-bg-yellow-400">
+          As an <strong>Airbnb Superhost</strong>, Kwetu Inn Africa offers elegant villas and cozy stays designed for total comfort.  
+          Enjoy <strong>private pools</strong>, <strong>WiFi</strong>, <strong>personal chefs</strong>, and breathtaking Lamu views.  
+          Perfect for honeymoons or family getaways — your dream stay awaits.
+        </p>
+        <a href="#contact" class="inline-block mt-6 px-8 py-3 bg-yellow-300 text-black font-bold text-lg rounded-xl hover:bg-yellow-400 transition-colors">
+          Book Your Stay Now →
+        </a>
+      </div>
+
+      <!-- 🖼️ Image -->
+      <div class="order-1 md:order-2" data-aos="fade-left" data-aos-duration="1000">
+        <img src="images/4.jpg" alt="Kwetu Inn Airbnb Stays" class="rounded-2xl shadow-lg w-full">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Initialize AOS -->
+<script>
+  AOS.init({
+    once: false,  // Re-animates on re-scroll
+    mirror: true, // Fade out when scrolling past
+  });
+</script>
+
+<!-- 🖼️ Gallery Section -->
+<section id="gallery" class="bg-white py-20 px-6">
+  <div class="max-w-7xl mx-auto text-center mb-12">
+    <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 mb-4"
+        data-animate="zoom-in">
+      Explore the Beauty of Lamu
+    </h2>
+    <p class="text-lg md:text-2xl italic text-gray-600" data-animate="fade-up">
+      A visual journey through beaches, sunsets & Swahili coast charm.
+    </p>
+  </div>
+
+  <!-- Image Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+    <div class="relative">
+      <img src="images/lamu.webp" 
+           alt="Lamu dhow sailing" 
+           class="w-full h-80 md:h-[500px] object-cover">
+    </div>
+    <div class="relative">
+      <img src="images/tusitiri_sunset_sail1-Tusitiri-Dhow-Lamu-Kenya.webp" 
+           alt="Lamu beach coastline" 
+           class="w-full h-80 md:h-[500px] object-cover">
+    </div>
+    <div class="relative">
+      <img src="images/lamu1-1920x630.webp" 
+           alt="Lamu island architecture" 
+           class="w-full h-80 md:h-[500px] object-cover">
+    </div>
+  </div>
+</section>
+
+    
+    <!-- Contact -->
+    <section id="contact" class="max-w-7xl mx-auto py-12 px-6">
+      <h3 class="text-3xl font-bold text-center mb-6">Contact Us</h3>
+      <p class="text-center mb-6">📞 Call: <strong>0104 552219</strong> | M-Pesa: <strong>0702 118511</strong></p>
+      <form class="max-w-2xl mx-auto bg-white shadow-lg p-6 rounded-2xl">
+        <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg mb-4" required>
+        <input type="email" placeholder="Your Email" class="w-full p-3 border rounded-lg mb-4" required>
+        <textarea placeholder="Your Message" class="w-full p-3 border rounded-lg mb-4" rows="4"></textarea>
+        <button class="bg-yellow-300 text-white px-6 py-3 rounded-xl hover:bg-yellow-400 transition">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-yellow-400 text-white text-center py-6 mt-8">
+      <p>&copy; 2025 Kwetu Inn Africa. All Rights Reserved.</p>
+      <p>Designed with ❤️ in Lamu</p>
+    </footer>
+  </div>
+
+  <script>
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    // Open menu
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+    });
+
+    // Close menu
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.remove('translate-x-0');
+      mobileMenu.classList.add('translate-x-full');
+    });
+
+    // Auto close on scroll
+    window.addEventListener('scroll', () => {
+      if (!mobileMenu.classList.contains('translate-x-full')) {
+        mobileMenu.classList.remove('translate-x-0');
+        mobileMenu.classList.add('translate-x-full');
+      }
+    });
+  </script>
+</body>
+</html>
