@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kwetu Inn Africa | About Our Journey</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@tailwindcss/forms"></script>
+
+  <style>
+    /* Custom animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-in-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-[Poppins]">
+    <!-- Home Button -->
+<!-- Centered Home Button -->
+<div class="flex justify-center mt-8">
+  <a href="index.html" 
+     class="flex items-center gap-2 px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-full shadow-md hover:bg-yellow-500 transition duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         fill="none" viewBox="0 0 24 24" 
+         stroke-width="2" stroke="currentColor" 
+         class="w-5 h-5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+    Home
+  </a>
+</div>
+
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-cover bg-center h-[60vh]" style="background-image: url('https://images.unsplash.com/photo-1588011930968-eadac80b4b97?auto=format&fit=crop&w=1470&q=80');">
+    <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center px-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-20">Empowering Communities Through Tourism</h2>
+      <p class="max-w-2xl text-gray-200 text-lg">Discover the story of Kwetu Inn Africa — where culture, hospitality, and empowerment meet along Kenya’s beautiful coast.</p>
+    </div>
+  </section>
+
+  <!-- MAIN BLOG SECTION -->
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
+    
+    <!-- About Section -->
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-yellow-400 mb-4 border-l-4 border-yellow-400 pl-3">What is Kwetu Inn Africa?</h2>
+      <p class="text-gray-200 leading-relaxed">
+        Kwetu Inn Africa is a community-driven hospitality and tourism initiative based along the Kenyan coast. 
+        The word <span class="text-yellow-400 font-semibold">“Kwetu”</span> means “our home” in Swahili — a perfect reflection of the warm, inclusive experience it offers to travelers seeking authentic cultural connections and eco-tourism adventures.
+      </p>
+      <p class="mt-4 text-gray-200 leading-relaxed">
+        Founded in <span class="text-yellow-400 font-semibold">2019</span>, Kwetu Inn Africa has become a hub for promoting responsible tourism that benefits both guests and local communities. 
+        The organization focuses on showcasing the natural beauty of places like <span class="text-yellow-400 font-semibold">Lamu Mainland</span>, 
+        often overlooked by mainstream tourism, while empowering local artisans, guides, and families.
+      </p>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-yellow-400 mb-4 border-l-4 border-yellow-400 pl-3">Who Leads Kwetu Inn Africa?</h2>
+      <p class="text-gray-200 leading-relaxed">
+        Kwetu Inn Africa was founded and is led by a visionary team of passionate individuals dedicated to sustainable development and cultural preservation.
+      </p>
+      <ul class="mt-4 space-y-3 text-gray-300">
+        <li><span class="text-yellow-400 font-semibold">Stanley Muthama Muiruri</span> – Founder & Managing Director</li>
+        <li><span class="text-yellow-400 font-semibold">Jane Wanjiku</span> – Operations & Marketing Manager</li>
+        <li><span class="text-yellow-400 font-semibold">Ahmed Rashid</span> – Cultural & Community Liaison Officer</li>
+        <li><span class="text-yellow-400 font-semibold">Fatma Ali</span> – Guest Relations & Hospitality Head</li>
+      </ul>
+      <p class="mt-4 text-gray-200 leading-relaxed">
+        Together, they strive to create meaningful travel experiences that foster community growth and cultural pride across Kenya’s coast.
+      </p>
+    </section>
+
+    <!-- Mission & Values Section -->
+    <section class="fade-in">
+      <h2 class="text-3xl font-semibold text-yellow-400 mb-4 border-l-4 border-yellow-400 pl-3">Our Mission and Values</h2>
+      <p class="text-gray-200 leading-relaxed">
+        At the heart of Kwetu Inn Africa lies a commitment to community empowerment through tourism. 
+        By integrating local culture, eco-friendly practices, and entrepreneurship, the organization ensures that tourism directly benefits the people who make each destination special.
+      </p>
+      <ul class="mt-4 list-disc list-inside text-gray-300 space-y-2">
+        <li>Promote eco-tourism and cultural sustainability.</li>
+        <li>Support local communities through training and collaboration.</li>
+        <li>Preserve Swahili heritage and coastal traditions.</li>
+        <li>Create authentic and memorable guest experiences.</li>
+      </ul>
+    </section>
+
+ <!-- Gallery Section -->
+<section class="fade-in">
+  <h2 class="text-3xl font-semibold text-yellow-400 mb-6 border-l-4 border-yellow-400 pl-3">
+    Snapshots from Kwetu Inn Africa
+  </h2>
+  
+  <!-- Gallery Container -->
+  <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
+</section>
+
+<script>
+  // Fetch and display images from folder
+  fetch('get-images.php')
+    .then(res => res.json())
+    .then(images => {
+      const gallery = document.getElementById('gallery');
+      gallery.innerHTML = ''; // clear any existing items
+
+      images.forEach(src => {
+        const wrapper = document.createElement('div');
+        wrapper.className = "w-full h-64 md:h-72 overflow-hidden rounded-lg shadow-lg hover:scale-105 transition duration-300";
+
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = 'Kwetu Inn Africa view';
+        img.className = "w-full h-full object-cover";
+
+        wrapper.appendChild(img);
+        gallery.appendChild(wrapper);
+      });
+    })
+    .catch(err => console.error('Error loading images:', err));
+</script>
+
+
+  </main>
+
+  
+<!-- 🌴 FOOTER SECTION - KWETU INN AFRICA -->
+<footer class="bg-black text-gray-300 py-12 px-6 font-[Poppins]">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <!-- 🏝️ Brand Info -->
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <img src="images/logo.png" alt="Kwetu Inn Africa Logo" class="w-12 h-12 rounded-full border border-yellow-400">
+        <h3 class="text-2xl font-bold text-yellow-400">Kwetu Inn Africa</h3>
+      </div>
+      <p class="text-sm leading-relaxed">
+        Your trusted gateway to <strong>Lamu’s adventures, beaches,</strong> and <strong>culture.</strong>  
+        Experience authentic Swahili hospitality with our full-service travel and Airbnb solutions.
+      </p>
+    </div>
+
+    <!-- 📍 Quick Links -->
+    <div>
+      <h4 class="text-lg font-semibold text-yellow-400 mb-3">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-yellow-400 transition">About Us</a></li>
+        <li><a href="#services" class="hover:text-yellow-400 transition">Services</a></li>
+        <li><a href="#airbnb" class="hover:text-yellow-400 transition">Airbnb</a></li>
+        <li><a href="#gallery" class="hover:text-yellow-400 transition">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400 transition">Contact</a></li>
+        <li><a href="blog.html" class="hover:text-yellow-400 transition">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- 🧭 Our Services -->
+    <div>
+      <h4 class="text-lg font-semibold text-yellow-400 mb-3">Our Services</h4>
+      <ul class="space-y-2 text-sm">
+        <li>🚢 Island Transport</li>
+        <li>🍴 Food & Catering</li>
+        <li>🏨 Accommodation</li>
+        <li>🎉 Event Planning</li>
+        <li>🏖️ Beach Getaways</li>
+        <li>🌍 Cultural Tours</li>
+      </ul>
+    </div>
+
+    <!-- 📞 Contact & Socials -->
+    <div>
+      <h4 class="text-lg font-semibold text-yellow-400 mb-3">Get in Touch</h4>
+      <p class="text-sm mb-3"><i class="fas fa-phone-alt text-yellow-400 mr-2"></i> +254 104 552219</p>
+      <p class="text-sm mb-3"><i class="fas fa-envelope text-yellow-400 mr-2"></i> info@kwetuinnafrica.com</p>
+      <p class="text-sm mb-5"><i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i> Lamu County, Kenya</p>
+
+      <!-- 🌐 Social Media -->
+      <div class="flex gap-4 text-2xl">
+        <a href="#" class="text-[#1877F2] hover:scale-110 transition"><i class="fab fa-facebook-square"></i></a>
+        <a href="#" class="text-[#E4405F] hover:scale-110 transition"><i class="fab fa-instagram-square"></i></a>
+        <a href="#" class="text-[#1DA1F2] hover:scale-110 transition"><i class="fab fa-twitter-square"></i></a>
+        <a href="#" class="text-[#25D366] hover:scale-110 transition"><i class="fab fa-whatsapp-square"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⚓ Divider -->
+  <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+    <p>© <span id="year"></span> <strong>Kwetu Inn Africa</strong>. All Rights Reserved.</p>
+    <p class="mt-2">Designed with ❤️ by <span class="text-yellow-400 font-semibold">Webgraphics solution</span></p>
+  </div>
+
+  <!-- 🕒 Auto Year Script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+
+  <!-- SCRIPT: Fade In Animation -->
+  <script>
+    const sections = document.querySelectorAll('.fade-in');
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < windowHeight - 100) {
+          section.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
+</body>
+</html>

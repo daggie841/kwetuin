@@ -106,11 +106,12 @@
         <!-- DESKTOP NAV -->
         <nav class="hidden md:flex gap-6 items-center text-gray-700">
           <a href="index.html" class="hover:text-yellow-500">Home</a>
-          <a href="#about" class="hover:text-yellow-500">About</a>
-          <a href="#services" class="hover:text-yellow-500">Services</a>
-          <a href="#airbnb" class="hover:text-yellow-500">Airbnb</a>
-          <a href="#gallery" class="hover:text-yellow-500">Gallery</a>
-          <a href="#contact" class="hover:text-yellow-500">Contact</a>
+          <a href="index.html#about" class="hover:text-yellow-500">About</a>
+          <a href="index.html#services" class="hover:text-yellow-500">Services</a>
+          <a href="index.html#airbnb" class="hover:text-yellow-500">Airbnb</a>
+          <a href="index.html#gallery" class="hover:text-yellow-500">Gallery</a>
+          <a href="index.html#contact" class="hover:text-yellow-500">Contact</a>
+          <a href="blog.html" class="text-yellow-400 hover:text-yellow-500">Blog</a>
         </nav>
 
         <!-- CTA -->
@@ -128,48 +129,16 @@
       <button id="closeMenu" class="text-xl mb-4"><i class="fas fa-times"></i></button>
       <nav class="flex flex-col space-y-4 text-gray-700">
         <a href="index.html" class="hover:text-yellow-500">Home</a>
-        <a href="#about" class="hover:text-yellow-500">About</a>
-        <a href="#services" class="hover:text-yellow-500">Services</a>
-        <a href="#airbnb" class="hover:text-yellow-500">Airbnb</a>
-        <a href="#gallery" class="hover:text-yellow-500">Gallery</a>
-        <a href="#contact" class="hover:text-yellow-500">Contact</a>
-        <a href="#contact" class="font-semibold text-yellow-500">Book Now</a>
+        <a href="index.html#about" class="hover:text-yellow-500">About</a>
+        <a href="index.html#services" class="hover:text-yellow-500">Services</a>
+        <a href="index.html#airbnb" class="hover:text-yellow-500">Airbnb</a>
+        <a href="index.html#gallery" class="hover:text-yellow-500">Gallery</a>
+        <a href="index.html#contact" class="hover:text-yellow-500">Contact</a>
+        <a href="index.html#contact" class="font-semibold text-yellow-500">Book Now</a>
+        <a href="blog.html" class="hover:text-yellow-500">Blog</a>
       </nav>
     </div>
   </div>
-
-  <script>
-    // MOBILE MENU TOGGLE
-    const mobileBtn = document.getElementById('mobileBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeMenu = document.getElementById('closeMenu');
-
-    mobileBtn.addEventListener('click', () => {
-      mobileMenu.style.transform = 'translateX(0)';
-    });
-    closeMenu.addEventListener('click', () => {
-      mobileMenu.style.transform = 'translateX(100%)';
-    });
-
-    // HEADER SHRINK ON SCROLL
-    const header = document.getElementById('mainHeader');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('shrink');
-      } else {
-        header.classList.remove('shrink');
-      }
-    });
-
-    // ACTIVE LINK HIGHLIGHT
-    const links = document.querySelectorAll('nav a');
-    const currentPage = window.location.hash || window.location.pathname.split('/').pop();
-    links.forEach(link => {
-      if (link.getAttribute('href').includes(currentPage)) {
-        link.classList.add('active-link');
-      }
-    });
-  </script>
 
 <!-- ✅ Hero Section: Kwetu In - Tourism & Adventure in Lamu -->
 <section id="home" class="relative h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
@@ -519,24 +488,39 @@
   </div>
 
   <!-- Image Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> <!-- added gap -->
     <div class="relative">
       <img src="images/lamu.webp" 
            alt="Lamu dhow sailing" 
-           class="w-full h-80 md:h-[500px] object-cover">
+           class="w-full h-80 md:h-[500px] object-cover rounded-lg shadow-md hover:scale-105 transition duration-300">
     </div>
     <div class="relative">
       <img src="images/tusitiri_sunset_sail1-Tusitiri-Dhow-Lamu-Kenya.webp" 
            alt="Lamu beach coastline" 
-           class="w-full h-80 md:h-[500px] object-cover">
+           class="w-full h-80 md:h-[500px] object-cover rounded-lg shadow-md hover:scale-105 transition duration-300">
     </div>
     <div class="relative">
       <img src="images/lamu1-1920x630.webp" 
            alt="Lamu island architecture" 
-           class="w-full h-80 md:h-[500px] object-cover">
+           class="w-full h-80 md:h-[500px] object-cover rounded-lg shadow-md hover:scale-105 transition duration-300">
     </div>
   </div>
+
+  <!-- Learn More Button -->
+  <div class="max-w-7xl mx-auto flex justify-end mt-10">
+    <a href="blog.html#gallery" 
+       class="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-yellow-500 transition duration-300">
+      Learn More
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           fill="none" viewBox="0 0 24 24" 
+           stroke-width="2" stroke="currentColor" 
+           class="w-5 h-5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </div>
 </section>
+
 
     
     <!-- Contact -->
@@ -577,6 +561,7 @@
         <li><a href="#airbnb" class="hover:text-yellow-400 transition">Airbnb</a></li>
         <li><a href="#gallery" class="hover:text-yellow-400 transition">Gallery</a></li>
         <li><a href="#contact" class="hover:text-yellow-400 transition">Contact</a></li>
+        <li><a href="blog.html" class="hover:text-yellow-400 transition">Blog</a></li>
       </ul>
     </div>
 
@@ -613,7 +598,7 @@
   <!-- ⚓ Divider -->
   <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
     <p>© <span id="year"></span> <strong>Kwetu Inn Africa</strong>. All Rights Reserved.</p>
-    <p class="mt-2">Designed with ❤️ by <span class="text-yellow-400 font-semibold">Webgraphics solutions</span></p>
+    <p class="mt-2">Designed with ❤️ by <span class="text-yellow-400 font-semibold">Webgraphics solution</span></p>
   </div>
 
   <!-- 🕒 Auto Year Script -->
@@ -624,29 +609,55 @@
 
 
   <script>
-    const mobileBtn = document.getElementById('mobileBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeMenu = document.getElementById('closeMenu');
+  // MOBILE MENU TOGGLE
+  const mobileBtn = document.getElementById('mobileBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeMenu = document.getElementById('closeMenu');
 
-    // Open menu
-    mobileBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('translate-x-full');
-      mobileMenu.classList.add('translate-x-0');
-    });
+  // Open menu
+  mobileBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent immediate close
+    mobileMenu.style.transform = 'translateX(0)';
+  });
 
-    // Close menu
-    closeMenu.addEventListener('click', () => {
-      mobileMenu.classList.remove('translate-x-0');
-      mobileMenu.classList.add('translate-x-full');
-    });
+  // Close button
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.style.transform = 'translateX(100%)';
+  });
 
-    // Auto close on scroll
-    window.addEventListener('scroll', () => {
-      if (!mobileMenu.classList.contains('translate-x-full')) {
-        mobileMenu.classList.remove('translate-x-0');
-        mobileMenu.classList.add('translate-x-full');
-      }
-    });
-  </script>
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    const isClickInside = mobileMenu.contains(event.target) || mobileBtn.contains(event.target);
+    if (!isClickInside && mobileMenu.style.transform === 'translateX(0px)') {
+      mobileMenu.style.transform = 'translateX(100%)';
+    }
+  });
+
+  // Close menu on scroll
+  window.addEventListener('scroll', () => {
+    mobileMenu.style.transform = 'translateX(100%)';
+  });
+
+  // HEADER SHRINK ON SCROLL
+  const header = document.getElementById('mainHeader');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('shrink');
+    } else {
+      header.classList.remove('shrink');
+    }
+  });
+
+  // ACTIVE LINK HIGHLIGHT
+  const links = document.querySelectorAll('nav a');
+  const currentPage = window.location.hash || window.location.pathname.split('/').pop();
+  links.forEach(link => {
+    if (link.getAttribute('href').includes(currentPage)) {
+      link.classList.add('active-link');
+    }
+  });
+</script>
+
+
 </body>
 </html>
